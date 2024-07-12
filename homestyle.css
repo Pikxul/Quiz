@@ -1,0 +1,66 @@
+body {
+    background-image: url("https://i.pinimg.com/564x/22/04/bc/2204bc45a8eef0505f32922da830a46b.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 0;
+    background-color: #6b88bc;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+.box {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    border-radius: 10px;
+    width: 100%; /* Take full width of the container */
+    max-width: 400px; /* Limit box width */
+    height: 100px;
+    padding: 20px;
+    margin: 10px 0; /* Add margin between boxes */
+    border: 2px solid #000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .box {
+        max-width: 300px; /* Adjust box width for smaller screens */
+    }
+}
+
+.box1 {
+    background-image: url("https://i.pinimg.com/564x/7c/5d/b2/7c5db22c74609b3d7cf92bcd9da4d507.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.box2 {
+    background-image: url("https://img.freepik.com/free-vector/orange-question-mark-background-with-text-space_1017-27394.jpg?size=626&ext=jpg&ga=GA1.1.54239672.1720726009&semt=sph");
+    background-size: cover;
+    background-position: center;
+}
+
+.box3 {
+    background-image: url("https://img.freepik.com/free-vector/curiosity-brain-concept-illustration_114360-11037.jpg?size=626&ext=jpg&ga=GA1.1.54239672.1720726009&semt=sph");
+    background-size: cover;
+    background-position: center;
+}
