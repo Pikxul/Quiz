@@ -5,6 +5,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 let questions = [];
 
+
 async function fetchQuestions() {
     try {
         const response = await fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=medium');
