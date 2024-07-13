@@ -14,7 +14,6 @@ async function fetchQuestions() {
         const data = await response.json();
         questions = data.results;
         totalmarks = questions.length;
-        //console.log(questions); // Log the questions to ensure data is fetched
         displayQuestion();
     } catch (error) {
         console.error('Error fetching questions:', error);
@@ -29,7 +28,6 @@ function displayQuestion() {
 
     quizContainer.innerHTML = '';
     const question = questions[currentQuestionIndex];
-    //console.log(question); // Log the current question to ensure it's correct
     const questionElement = document.createElement('div');
     questionElement.classList.add('question');
     questionElement.innerHTML = `<h2>${question.question}</h2>`;
@@ -41,10 +39,15 @@ function displayQuestion() {
     options.forEach(option => {
         const button = document.createElement('button');
         button.textContent = option;
-        button.onclick = () => checkAnswer(option, question.correct_answer);
+        button.onclick = () => {
+            checkAnswer(option, question.correct_answer);
+            nextButton.style.display = 'block';
+        };
         optionsElement.appendChild(button);
     });
     quizContainer.appendChild(optionsElement);
+
+    nextButton.style.display = 'none';
 }
 
 function checkAnswer(selected, correct) {
@@ -52,11 +55,6 @@ function checkAnswer(selected, correct) {
         score++;
     }
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        displayQuestion();
-    } else {
-        displayResults();
-    }
 }
 
 function displayResults() {
@@ -77,7 +75,6 @@ function fstatus(score, totalmarks) {
     }
 }
 
-// Removing this part as it was not used correctly
 nextButton.onclick = () => {
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
