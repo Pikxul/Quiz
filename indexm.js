@@ -7,7 +7,7 @@ let questions = [];
 
 async function fetchQuestions() {
     try {
-        const response = await fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=multiple');
+        const response = await fetch('https://opentdb.com/api.php?amount=20&category=9&difficulty=medium');
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
